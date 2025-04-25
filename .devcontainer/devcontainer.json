@@ -1,0 +1,8 @@
+{
+  "name": "bedrock-test",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13-bookworm",
+  "features": {
+    // aws-cli
+    "ghcr.io/devcontainers/features/aws-cli:1.1.1": {}
+  }
+}
