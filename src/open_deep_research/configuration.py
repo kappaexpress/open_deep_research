@@ -34,19 +34,19 @@ class Configuration:
     """The configurable fields for the chatbot."""
     # Common configuration
     report_structure: str = DEFAULT_REPORT_STRUCTURE # Defaults to the default report structure
-    search_api: SearchAPI = SearchAPI.TAVILY # Default to TAVILY
+    search_api: SearchAPI = SearchAPI.GOOGLESEARCH 
     search_api_config: Optional[Dict[str, Any]] = None
     
     # Graph-specific configuration
     number_of_queries: int = 2 # Number of search queries to generate per iteration
     max_search_depth: int = 2 # Maximum number of reflection + search iterations
-    planner_provider: str = "anthropic"  # Defaults to Anthropic as provider
-    planner_model: str = "claude-3-7-sonnet-latest" # Defaults to claude-3-7-sonnet-latest
+    planner_provider: str = "bedrock" 
+    planner_model: str = "us.anthropic.claude-3-7-sonnet-20250219-v1:0" 
     planner_model_kwargs: Optional[Dict[str, Any]] = None # kwargs for planner_model
-    writer_provider: str = "anthropic" # Defaults to Anthropic as provider
-    writer_model: str = "claude-3-5-sonnet-latest" # Defaults to claude-3-5-sonnet-latest
+    writer_provider: str = "bedrock" 
+    writer_model: str = "us.anthropic.claude-3-5-haiku-20241022-v1:0" 
     writer_model_kwargs: Optional[Dict[str, Any]] = None # kwargs for writer_model
-    search_api: SearchAPI = SearchAPI.TAVILY # Default to TAVILY
+    search_api: SearchAPI = SearchAPI.GOOGLESEARCH
     search_api_config: Optional[Dict[str, Any]] = None 
     
     # Multi-agent specific configuration
